@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  2 00:20:11 2018
+
+@author: nabrad313
+"""
+
+import time
+import random
+
+def ball():
+    tote1 = 0
+    for i in range(5):
+        answer = ["It is certain", "It is decidedly so", "Without a doubt",\
+                 "Yes, definitely", "You may rely on it", "As I see it, yes",\
+                 "Most likely", "Outlook good", "Yep", "Signs point to yes",\
+                 "Reply hazy, try again", "Ask again later",\
+                 "Better not tell you now", "Cannot predict now",\
+                 "Concentrate and ask again", "Don't count on it",\
+                 "My reply is no", "My sources say no", "Outlook not so good",\
+                 "Very doubtful"]
+        str(input("What is your question? "))
+        print("Thinking. . .")
+        time.sleep(3)
+        print(answer[random.randint(0,19)])
+        time.sleep(2)
+        repeat = str(input("If you would like to try again, type 'yes': "))
+        if repeat.lower() == "yes":
+            tote1 += 1
+        else:
+            break 
+    print("Goodbye.")
+        
+ball()   
+
+     
