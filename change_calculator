@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  5 22:12:39 2018
+
+@author: nabrad313
+"""
+
+cost = float(input("Cost: $"))
+amount_given = float(input("Amount given: $"))
+change = round(amount_given - cost, 2)
+
+quarter = 0.25
+dime = 0.10
+nickel = 0.05
+penny = 0.01
+
+num_quarter = int(change / quarter)
+change -= num_quarter * quarter
+num_dime = int(change / dime)
+change -= num_dime * dime
+num_nickel = int(change / nickel)
+change -= num_nickel * nickel
+num_penny = int(change / penny)
+change -= num_penny * penny
+
+num = ["quarter", "dime", "nickel", "penny",\
+       num_quarter, num_dime, num_nickel, num_penny]
+for i in range(4):
+    print("%s: %s" % (num[i], num[i+4]))           
