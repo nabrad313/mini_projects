@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 13 23:30:53 2018
+
+@author: nabrad313
+"""
+from itertools import groupby
+
+word = "MMMMMEEEEEELLLLLLLLLLLLDDDDDDDDDIIIIIIIIIIIIII"
+res = []
+
+for k,i in groupby(word):
+    char = list(i)
+    if len(char) > 0:
+        res.append("{}{}".format(len(char), k))
+    else:
+        res.extend(char)
+
+res = "".join(res)    
+print(res)      
