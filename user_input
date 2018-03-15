@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 22 01:29:18 2018
+
+@author: nabrad313
+"""
+
+answer = input("Say something: ")
+print ("Did you say " + answer + "?")
