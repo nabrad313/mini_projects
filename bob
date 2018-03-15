@@ -1,0 +1,40 @@
+# mini_projects# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb 27 11:54:29 2018
+
+@author: nabrad313
+"""
+
+class bob(object):
+    def __init__(self, call):
+        self.call = call
+        
+    def converse(call):
+        if "!?" in call or "?!" in call:
+            print("Bob: Calm down, i know what I'm doing!")
+        elif "?" in call:
+            print("Bob: Sure.")
+        elif "!" in call:
+            print("Bob: Whoa, chill out!")        
+        elif call == "Bob" or call == "Bob." or call == "Bob!":
+            print("Bob: Fine. Be that way!")
+        else:
+            print("Bob: Whatever.")
+
+print("Bob walks into the living room and plops down on the couch.")
+print("He looks like he has something on his mind.")
+print("Sit down beside him and ask him what's going on.")  
+i = 100          
+while i > 0:
+    call = str(input("You: "))
+    if call == "Bob" or call == "Bob." or call == "Bob!":
+        bob.converse(call)
+        i = 0
+    else:
+        bob.converse(call)
+    i -= 1    
+else:
+    print()
+    print("Bob gets up and storms out of the room.")
+    print("It must have been something you said.")
+           
