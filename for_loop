@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 22 02:02:48 2018
+
+@author: nabrad313
+"""
+
+for nums in range(11):
+    print (nums)
