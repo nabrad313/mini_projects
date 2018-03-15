@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  2 01:31:00 2018
+
+@author: nabrad313
+"""
+import statistics
+
+def checker():
+    turns = 0
+    for i in range(11):
+        side1 = int(input("Enter the first side of a triangle: "))
+        side2 = int(input("Enter the second side of a triangle: "))
+        side3 = int(input("Enter the third side of a triangle: "))
+        sides = [side1, side2, side3]
+        a = min(sides)
+        b = statistics.median(sides)
+        c = max(sides)
+        
+        if c ** 2 == a ** 2 + b ** 2:
+            print("The sides make up a right triangle!")
+        else:
+            print("The sides do not make up a right triangle.")
+        try_again = str(input("Would you like to try again? "))
+        if try_again == "yes":
+            turns += i
+        else:
+            print("Goodbye.")
+            break
+
+checker()                
