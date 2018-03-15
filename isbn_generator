@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 24 19:00:53 2018
+
+@author: nabrad313
+"""
+
+import random
+
+def num_gen():
+    randi = ""
+    i = 10
+    while i > 0:
+        randi += str(random.randint(0,9))
+        i -= 1
+    return randi
+
+def isbn_gen():
+    n = 0
+    while n <= 100:
+        x = []
+        y = num_gen()
+        for nums in y:
+            x.append(int(nums))
+        if ((x[0] * 10) + (x[1] * 9) + (x[2] * 8) + (x[3] * 7) + (x[4] * 6) + \
+           (x[5] * 5) + (x[6] * 4) + (x[7] * 3) + (x[8] * 2) + x[9]) % 11 == 0:
+            print(y)
+            return y
+            break
+        else:
+            n += 1
+
+isbn_gen()            
