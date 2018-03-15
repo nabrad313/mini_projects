@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 22 23:59:48 2018
+
+@author: nabrad313
+"""
+
+def is_pangram(phrase):
+    alph = "abcdefghijklmnopqrstuvwxyz"
+    
+    for char in alph:
+        if char not in phrase:
+            return False
+        else:
+            return True 
+
+phrase1 = str(input("Enter a phrase: "))
+
+if is_pangram(phrase1) == True:
+    print ("'" + phrase1 + "' is a pangram")
+else:
+    print ("'" + phrase1 + "' is not a pangram")
+    
