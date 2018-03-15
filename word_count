@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 24 20:46:09 2018
+
+@author: nabrad313
+"""
+
+def word_count():
+    phrase = str(input("Enter a phrase: "))
+    word_list = phrase.split()
+    only_word = set(word_list)
+    
+    for item in only_word:
+        print(item + ":", word_list.count(item))  
+
+word_count()
