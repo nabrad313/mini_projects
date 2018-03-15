@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb 23 19:40:00 2018
+
+@author: nabrad313
+"""
+
+def transcription(sequence):
+    RNA = ""
+    for item in sequence:
+        if item in "GCTA":
+            if item == "G":
+                RNA += "C"
+            if item == "C":
+                RNA += "G"
+            if item == "T":
+                RNA += "A"
+            if item == "A":
+                RNA += "U"
+        else:
+            raise Exception("Invalid DNA Sequence")
+    print ("RNA sequence is: " + RNA)
+            
+DNA = str(input("Enter a DNA sequence: "))
+transcription(DNA)
