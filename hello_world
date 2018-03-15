@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 22 01:11:34 2018
+
+@author: nabrad313
+"""
+
+#print ("Hello world!")
+print("Hello World")
