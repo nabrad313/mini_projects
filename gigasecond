@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb 25 01:04:59 2018
+
+@author: nabrad313
+"""
+
+def timer(time):
+    print(time, "seconds is:")
+    year = int(time / (60 * 60 * 24 * 365))
+    day = int((time % (60 * 60 * 24 * 365)) / (60 * 60 * 24))
+    hour = int((time % (60 * 60 * 24)) / (60 * 60))
+    minute = int((time % (60 * 60)) / 60)
+    second = time % 60
+    
+    times = [["year", "day", "hour", "minute", "second"],\
+             [year, day, hour, minute, second]]
+    for i in range(5):
+        if times[1][i] > 1:
+            print(times[1][i], "%ss" % (times[0][i]))
+        elif times[1][i] == 1:
+            print(times[1][i], "%s" % (times[0][i]))
+        
+timer(10 ** 9)    
+    
