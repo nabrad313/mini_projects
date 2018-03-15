@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar  3 00:07:24 2018
+
+@author: nabrad313
+"""
+def coin_counter():
+    weights = []
+    weights_kg = [2.5, 5.0, 2.268, 5.67]
+    weights_lb = [2.5 * 0.0022, 5.0 * 0.0022, 2.268 * 0.0022, 5.67 * 0.0022]
+    
+    print("Welcome to Coin Counter!")
+    unit = str(input("Are you using lb. or kg? "))
+    if unit == "lb":
+        weights = weights_lb
+    elif unit == "kg":
+        weights = weights_kg
+    else:
+        print("Invalid unit of measurement. Please try again.")
+            
+    penny = int(input("How much do your pennies weight? "))
+    nickel = int(input("How much do your nickels weight? ")) 
+    dime = int(input("How much do your dimes weight? "))
+    quarter = int(input("How much do your quarters weight? "))
+    
+    quantity = [penny/weights[0],nickel/weights[1],\
+                dime/weights[2],quarter/weights[3]]
+    
+    rolls = [quantity[0]/50,quantity[1]/40,quantity[2]/50,quantity[3]/40]
+    coins = ["penny rolls:", "nickel rolls:", "dime wolls:", "quarter rolls:"]
+
+    print("You'll need:")
+    for i in range(4):
+        print(coins[i], int(rolls[i]))
+   
+coin_counter()    
+        
