@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 24 01:53:25 2018
+
+@author: nabrad313
+"""
+
+import random
+
+def dna_seq():
+    nuc = ["A", "G", "C", "T"]
+    dna = ""
+    #i = 0
+    for i in range(50):
+        dna += nuc[random.randint(0,3)]
+        i += 1
+    return dna
+
+def ham_dist():
+    seq1 = dna_seq()
+    seq2 = dna_seq()
+    list1 = []
+    list2 = []
+    err = ""
+    dist = 0
+    
+    for item in seq1:
+        list1.append(item)
+    for item in seq2:
+        list2.append(item)
+    
+    i = 0
+    for list1[i] in list1:
+        if list1[i] != list2[i]:
+            err += "^"
+            dist += 1
+        else:
+            err += " "
+        i += 1
+    print(seq1)
+    print(seq2)
+    print(err)
+    print("The Hamming distance is:", dist)
+
+ham_dist()  
+      
