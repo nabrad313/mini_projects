@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+path = "/users/nabrad313/.spyder-py3/.anaconda/hello_world.txt"
+
+f = open(path,"r")
+
+contents = f.read()
+
+print(contents)
+
+f.close()
