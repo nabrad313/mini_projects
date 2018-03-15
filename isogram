@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Feb 22 22:28:50 2018
+
+@author: nabrad313
+"""
+
+word = str(input("Enter a word: "))
+count1 = 0
+count2 = 0
+for item in word:
+    count1 += 1
+    for other_item in word:
+        if item == other_item:
+            count2 += 1
+if count2 > count1:
+    print (word, "is not an isogram")
+else:
+    print (word, "is an isogram")
