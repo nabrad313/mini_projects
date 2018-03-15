@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar  6 21:00:30 2018
+
+@author: nabrad313
+"""
+import random
+
+rolls = int(input("How many rolls do you want? "))
+side1 = 0
+side2 = 0
+side3 = 0
+side4 = 0
+side5 = 0
+side6 = 0
+
+num_sides = [side1, side2, side3, side4, side5, side6]
+    
+def roller():
+    dice = random.randint(1,6)
+    return dice
+
+for i in range(rolls):
+    roll = roller()
+    print(roll)
+    response = str(input("Roll again? "))
+    if response == "":
+        num_sides[roll - 1] += 1
+    else:
+        break
+
+for i in range(6):
+    print("side %s: %s" % (i + 1, num_sides[i]))
+    
